@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmar Compra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .btn-confirmar {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-confirmar:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Finalizar Pedido</h1>
+  <p>Clique no botão abaixo para confirmar sua compra via WhatsApp:</p>
+  <button class="btn-confirmar" onclick="confirmarCompra()">Confirmar Compra</button>
+
+  <script>
+    function confirmarCompra() {
+      const numero = "5511930146577";
+      const mensagem = encodeURIComponent("Olá! Gostaria de confirmar minha compra.");
+      const link = `https://wa.me/${numero}?text=${mensagem}`;
+      window.open(link, "_blank");
+    }
+  </script>
+
+</body>
+</html>
